@@ -1,0 +1,197 @@
+@import '~antd/es/style/themes/default.less';
+@import '~antd/dist/antd.less'; // 引入官方提供的 less 样式入口文件
+
+// 自定义变量
+:root {
+  --content-width: 75rem;
+
+  @media (max-width: 83.33333rem) {
+    --content-width: 90%;
+  }
+}
+
+// 基础动画
+// 按钮：放上去变亮
+.animation-button {
+  &:hover {
+    filter: brightness(1.2);
+    color : white;
+  }
+}
+
+//无数据
+.no-data {
+  text-align: center;
+  padding   : 12.5rem 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+
+  .no-data-title {
+    font-size  : 2rem;
+    font-family: ArialMT;
+  }
+
+  .no-data-tips {
+    width    : 23.3125rem;
+    font-size: 0.875rem;
+    color    : rgba(255, 255, 255, 0.5);
+    margin   : 0 auto;
+  }
+}
+
+.ant-input-number-lg {
+  font-size: 0.875rem;
+}
+
+.ant-input::placeholder {
+  color: rgba(20, 13, 12, 0.7);
+}
+
+.ant-drawer-header {
+  display: none;
+}
+
+.ant-input-number-input {
+  padding: 0 1.25rem;
+}
+
+.ant-input-affix-wrapper-lg {
+  @media only screen and (max-width: 768px) {
+    padding: 0.3063rem 1.25rem;
+  }
+}
+
+// ant
+//modal自定义
+.ant-modal-wrap {
+  overflow: hidden;
+
+  .ant-modal {
+    .ant-modal-content {
+      background-color: transparent;
+
+      .ant-modal-body {
+        background-image : url('../img/modalBg.png');
+        background-size  : 100% 100%;
+        background-repeat: no-repeat;
+        padding          : 2.5rem 0.9375rem;
+
+        @media only screen and (max-width: 768px) {
+          padding: 1.25rem 0.9375rem;
+        }
+
+      }
+
+      .ant-modal-close {
+        position: absolute;
+        right   : -54px;
+        top     : 0;
+
+        @media only screen and (max-width: 768px) {
+          right: 0;
+        }
+
+        .ant-modal-close-x {
+          font-size: 24px;
+        }
+
+        &:hover {
+          color: #CEC9E3;
+        }
+      }
+    }
+  }
+}
+
+//spin自定义
+.ant-spin-nested-loading {
+  >div {
+    .ant-spin {
+      z-index   : 1001;
+      position  : fixed;
+      max-height: 100vh;
+
+      .ant-spin-dot {
+        .ant-spin-dot-item {
+          width           : 20px;
+          height          : 20px;
+          background-color: #A03C09;
+        }
+      }
+    }
+  }
+}
+
+.ant-input-affix-wrapper-lg {
+  font-size: 14px;
+}
+
+.ant-checkbox-checked .ant-checkbox-inner {
+  background-color: transparent;
+}
+
+.ant-input-number-input::placeholder {
+  color: rgba(20, 13, 12, 0.7);
+}
+
+.ant-checkbox-inner::after {
+  left  : 23.5%;
+  top   : 43%;
+  height: 0.7188rem;
+}
+
+
+// 常见变量
+@body-background     : #0D0404;
+@component-background: @body-background;
+@primary-color       : #1890ff; // 全局主色
+@link-color          : #1890ff; // 链接色
+@success-color       : #52c41a; // 成功色
+@warning-color       : #faad14; // 警告色
+@error-color         : #f5222d; // 错误色
+@font-size-base      : 16px; // 主字号
+@heading-color       : rgba(0, 0, 0, 0.85); // 标题色
+@text-color          : rgba(255, 255, 255, 0.5); // 主文本色
+@text-color-secondary: rgba(0, 0, 0, 0.45); // 次文本色
+@disabled-color      : rgba(0, 0, 0, 0.25); // 失效色
+@border-radius-base  : 2px; // 组件/浮层圆角
+@border-color-base   : #d9d9d9; // 边框色
+@box-shadow-base     : 0 3px 6px -4px rgba(0, 0, 0, 0.12),
+0 6px 16px 0 rgba(0, 0, 0, 0.08),
+0 9px 28px 8px rgba(0, 0, 0, 0.05); // 浮层阴影
+
+// Layout
+@layout-body-background    : @body-background;
+@layout-header-background  : rgba(0, 0, 0, 0);
+@layout-header-height      : auto;
+@layout-header-padding     : 0;
+@layout-header-color       : #8081A6;
+@layout-footer-padding     : 0;
+@layout-footer-background  : @layout-body-background;
+@layout-sider-background   : @layout-body-background;
+@layout-trigger-height     : 48px;
+@layout-trigger-background : #002140;
+@layout-trigger-color      : #fff;
+@layout-zero-trigger-width : 36px;
+@layout-zero-trigger-height: 42px;
+
+// Input
+@input-placeholder-color: #140D0C;
+
+// Checkbox
+@checkbox-size         : 20px;
+@checkbox-color        : #D40000;
+@checkbox-check-color  : #fff;
+@checkbox-check-bg     : #1E1111;
+@checkbox-border-width : 0;
+@checkbox-border-radius: 2px;
+
+
+// Modal
+@modal-body-padding : 20px 0;
+@modal-content-bg   : @component-background;
+@modal-mask-bg      : rgba(2, 2, 2, 0.4);
+@modal-close-color  : #CEC9E3;
+@modal-border-radius: 10px;
+
+// Spin
+@spin-dot-size: 50px;
